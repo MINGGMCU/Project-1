@@ -10,4 +10,86 @@ html {
 
 body {
   font-size: 1.6rem;
+  font-family: "Poppins", sans-serif;
+}
+
+/* ================ common ================ */
+a {
+  text-decoration: none; /* bỏ gạch chân */
+}
+
+.main-content {
+  width: 1170px; /* set độ rộng cho trang web */
+  max-width: calc(100% -48px); /* để lề lại mỗi bên 24px khi co trình duyệt */
+  margin-left: auto;
+  margin-right: auto;
+}
+.btn {
+    display: inline-block;
+    padding: 0px 16px;
+    min-width: 118px;
+    line-height: 50px;
+  color: #fff;
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 600;
+  border-radius: 24.5px;
+background: #171100;
+}
+/* ================ header ================ */
+.header{
+    background: #f7ecd0;
+}
+
+.header.fixed{
+    position: sticky;
+    top: -28px;
+}
+.header .body {
+  display: flex;
+  align-items: center;
+  padding: 36px 0 8px;
+}
+
+.nav ul {
+  display: flex;
+}
+
+.nav {
+  margin-left: auto;
+}
+
+.nav a {
+  color: #5f5b53;
+  font-size: 1.6rem;
+  /* không cần line height vì là thanh đièu hướng thường chỉ có 1 dòng */
+  position: relative;
+  padding: 8px 21px; /* vì khoảng cách là 42px nên đệm vào mỗi cái 21px */
+}
+.nav li.active a,
+.nav a:hover {
+  color: #171100;
+  text-shadow: 1px 0 0 currentColor;
+}
+
+.nav li.active a:after {
+  display: block; /* thẻ a là thẻ inline không set cao rộng được nên chuyển về block hoặc inline-block */
+  content: "";
+  width: 12px;
+  height: 2px;
+  border-radius: 1px;
+  background: #171100;
+  position: absolute;
+  left: 21px;
+  bottom: 6px;
+}
+
+.header .btn-sign-up{
+    min-width: 144px;
+
+
+}
+
+.header .action{
+    margin-left: 49px;
 }
